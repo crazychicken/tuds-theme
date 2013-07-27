@@ -70,15 +70,17 @@
 				<div class="comment">
 					<h3>Comment</h3>
 					<p class="number-comment"><i class="icon-comment-alt"></i><a href="#"> 1 Comment</a></p>
-					<form class="form-comment">
+					<form id="form-comment">
 						<label>Email</label>
 						<input type="email">
 						<label>Message</label>
 						<textarea></textarea>
-						<button class="f-right btn btn-red">Send</button>
+						<input name="submit" type="submit" id="submit" value="Post Comment" class="f-right btn btn-red">
+
+						<!-- <button class="f-right btn btn-red">Send</button> -->
 					</form>
 
-					<ul class="comment-list">
+					<!-- <ul class="comment-list">
 						<li>
 							<a class="avatar-comment" href="#"><img src="assets/images/avatar-comment.png" alt=""></a>
 							<div class="comment-info">
@@ -91,9 +93,36 @@
 							<div class="comment-info">
 								<a class="name" href="#">John doe</a> <span>Apr 20, 2013 at 9:26 PM</span>
 								<p>super clean!</p>
+							</div>
+						</li>
+					</ul> -->
+
+					<ul class="comment-list">
+						<li class="comment">
+
+							<div class="comment-body">
+								<div class="comment-author vcard">
+									<a class="avatar-comment" href="#">
+										<img src="assets/images/avatar-comment.png" alt="">
+									</a>
+
+									<cite class="fn"><a href="http://editor" rel="external nofollow" class="url">editor</a></cite> <span class="says">says:</span>
+								</div>
+
+								<div class="comment-meta commentmetadata"><a href="#">
+									July 27, 2013 at 10:40 am</a>
+								</div>
+
+								<p>fgfgfgf gfgfg fgfgfgf gfgfg fgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfg</p>
+
+								<div class="reply f-right">
+									<a class="comment-reply-link" href="/~tuds/wordpress/?project=project-3&amp;replytocom=2#respond" onclick="return addComment.moveForm(&quot;div-comment-2&quot;, &quot;2&quot;, &quot;respond&quot;, &quot;178&quot;)">Reply</a>
+								</div>
 							</div>
 						</li>
 					</ul>
+
+
 				</div>
 
 			</div>
