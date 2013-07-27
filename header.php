@@ -8,9 +8,8 @@
 	<!-- [if IE 7] -->
 	<link rel="stylesheet" type="text/css" href="wp-content/themes/dung-website/assets/css/font-awesome-ie7.css">
 	<!-- [endif] -->
-
-	<link rel="stylesheet" type="text/css" href="wp-content/themes/dung-website/style.css">
-
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
 	<?php wp_head(); ?>
 </head>
 
