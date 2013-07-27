@@ -643,7 +643,7 @@ input,textarea {
 /****** /sidebar *****/
 /******************************/
 .wrap-slide {
-	margin-bottom:40px;
+	margin-bottom:30px;
 	position:relative;
 	float:left;
 	width:100%;
@@ -679,14 +679,10 @@ input,textarea {
 /******************************/
 /****** /sidebar *****/
 /******************************/
-#wowslider-container1 {
-	max-width:870px !important;
-}
-#wowslider-container1 .ws_shadow {
-	background:none !important;
-}
-#wowslider-container1 .ws_bullets {
-	display:none !important;
+
+.metaslider .caption-wrap {
+	top:auto;
+	bottom:auto !important;
 }
 
 
