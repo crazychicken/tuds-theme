@@ -12,7 +12,7 @@
 
 		</div> -->
 		<div class="wrap-slide">
-			<?php echo do_shortcode("[metaslider id=39]"); ?>
+			<?php echo do_shortcode("[metaslider id=152]"); ?>
 		</div>
 
 		<div class="block-title">
