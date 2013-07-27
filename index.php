@@ -26,13 +26,28 @@
 		?>
 
 		<div class="block">
-			<a href="#">
+			<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 				<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '270'); }?>
 			</a>
 			<div class="block-right">
-				<h2 class="project-name"><a href="#"><?php the_title(); ?></a></h2>
-				<span class="name"><a href="#"><?php the_author() ?></a></span>
-				<p class="members">Member : <a href="#">john doe,</a> <a href="#">Petter,</a> <a href="#">Marry</a> ...</p>
+				<h2 class="project-name"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+				<span class="name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author() ?></a></span>
+				<?php 
+					$taxonomy = 'people';
+  					$terms = wp_get_post_terms($post->ID, $taxonomy);
+  				?>
+				<?php if(count($terms) > 0) : ?>
+					<p class="members">Member : 
+						<?php foreach($terms as $term): ?>
+							<?php 
+								$term_link = get_term_link( $term, 'people');
+							    if( is_wp_error( $term_link ) )
+							        continue;
+							?>
+							<a href="<?php echo $term_link ?>"><?php echo $term->name ?></a>
+						<?php endforeach; ?>
+					</p>
+				<?php endif; ?>
 			</div>
 
 			<div class="block-info">
@@ -43,8 +58,51 @@
 				<a class="view-more" href="#"><img src="<?php bloginfo('template_url') ?>/assets/images/arrow-right.png" alt=""></a>
 			</div>
 		</div>
-
 		<?php endwhile; ?>
+
+		<div class="block-title">
+			<h3><i class="icon-group"></i>Member Projects</h3>
+		</div>
+		<ul class="thumbnails">
+			<?php 
+				$authors = $wpdb->get_results("SELECT ID, user_nicename from $wpdb->users ORDER BY user_registered LIMIT 3");
+			?>
+			<?php if($authors && count($authors) > 0): ?>
+
+				<?php foreach($authors as $author): ?>
+					<!-- Get author post -->
+					<?php
+						$post_query = "SELECT ID, post_date, post_title
+											from $wpdb->posts 
+											WHERE 
+												$wpdb->posts.post_author=%d 
+												AND $wpdb->posts.post_type=%s
+												AND $wpdb->posts.post_status=%s
+										 	LIMIT 3";
+
+						$post_query = $wpdb->prepare($post_query, $author->ID, 'project', 'publish');
+						$posts = $wpdb->get_results($post_query);
+					?>
+					<?php if(count($posts) > 0): ?>
+					<li class="thumbnail">
+						<a href="<?php echo esc_url( get_author_posts_url( $author->ID ) ); ?>">
+							<?php if (function_exists('get_avatar')) { echo get_avatar( $author->ID, '270'); }?>
+						</a>
+						<h4 class="name"><a href="<?php echo esc_url( get_author_posts_url( $author->ID ) ); ?>"><?php echo $author->user_nicename; ?></a></h4>
+						<ol>
+							<li class="header-title">Project</li>
+							<?php foreach($posts as $post): ?>
+								<li>
+									<a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title ?></a>
+								</li>
+							<?php endforeach ?>
+						</ol>
+					</li>
+					<?php endif; ?>
+				<?php endforeach; ?>
+
+			<?php endif; ?>
+		</ul>
 	</div>
 
 	<?php get_sidebar();?>
