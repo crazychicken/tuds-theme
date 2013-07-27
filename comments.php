@@ -1,8 +1,12 @@
 <div class="comment">
 	<h3>Comment</h3>
 	<p class="number-comment"><i class="icon-comment-alt"></i><a href="#"> <?php echo get_comments_number() ?> Comment</a></p>
+	
 	<?php 
-		comment_form(); 
+		comment_form(array(
+			'title_reply' => '',
+			'comment_notes_after' => ''
+		)); 
 	?>
 
 	<?php if ( have_comments() ) : ?>
@@ -14,7 +18,9 @@
 				 * define twentyeleven_comment() and that will be used instead.
 				 * See twentyeleven_comment() in twentyeleven/functions.php for more.
 				 */
-				wp_list_comments();
+				wp_list_comments(array(
+					'callback' => 'twentyeleven_comment'
+				));
 			?>
 		</ul>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>

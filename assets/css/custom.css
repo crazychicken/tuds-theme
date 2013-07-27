@@ -273,6 +273,7 @@ input,textarea {
 }
 .thumbnail ol li {
 	padding:8px 0px;
+	cursor:pointer;
 }
 .thumbnail .header-title {
 	font-size:18px;
