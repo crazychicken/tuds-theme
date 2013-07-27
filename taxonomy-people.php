@@ -14,7 +14,7 @@
 						</a>
 						<div class="block-right">
 							<h2 class="project-name"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-							<span class="name"><a href="#"><?php the_author() ?></a></span>
+							<span class="name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author() ?></a></span>
 							<?php 
 								$taxonomy = 'people';
 			  					$terms = wp_get_post_terms($post->ID, $taxonomy);

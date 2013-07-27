@@ -423,25 +423,25 @@ input,textarea {
 .number-comment i{
 	font-size:24px;
 }
-.form-comment {
+#commentform {
 	float:left;
 	width:50%;
 	margin-bottom:30px;
 }
-.form-comment label,
-.form-comment input,
-.form-comment textarea {
+#commentform label,
+#commentform input,
+#commentform textarea {
 	float:left;
 	width:100%;
 	margin-bottom:10px;
 }
-.form-comment label {
+#commentform label {
 	margin-bottom:3px;
 }
-.form-comment textarea {
+#commentform textarea {
 	min-height:100px;
 }
-.form-comment .btn {
+#commentform .btn {
 	margin-right:-5%;
 }
 .comment-list {

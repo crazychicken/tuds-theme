@@ -33,6 +33,8 @@
 					<?php endif; ?>
 				</div>
 			</div>
+
+			<?php comments_template( '', true ); ?>
 		</div>
 		<?php get_sidebar();?>
 	</div>
