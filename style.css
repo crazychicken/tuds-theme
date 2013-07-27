@@ -679,4 +679,18 @@ input,textarea {
 /******************************/
 /****** /sidebar *****/
 /******************************/
+#wowslider-container1 {
+	max-width:870px !important;
+}
+#wowslider-container1 .ws_shadow {
+	background:none !important;
+}
+#wowslider-container1 .ws_bullets {
+	display:none !important;
+}
+
+
+
+
+
 
