@@ -504,12 +504,12 @@ input,textarea {
 	margin-bottom:5px;
 }
 .thumbnail ol li a {
-	background:url('../images/arrow-small-right.png') 10px center no-repeat;
+	background:url('./assets/images/arrow-small-right.png') 10px center no-repeat;
 	padding-left:25px;
 }
 .thumbnail ol li:hover a {
 	color:#df3d4a;
-	background:url('../images/arrow-small-hover.png') 10px center no-repeat;
+	background:url('./assets/images/arrow-small-hover.png') 10px center no-repeat;
 }
 /******************************/
 /****** /thumbnails *****/
