@@ -8,7 +8,7 @@
 			</div>
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array( 'post_type' => 'project', 'orderby' => 'post_date', 'order' => 'DESC', 'paged'=> $paged);
+				$args = array( 'post_type' => 'project', 'posts_per_page' => -1, 'orderby' => 'post_date', 'order' => 'DESC', 'paged'=> $paged);
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ):
 					$loop->the_post();
@@ -16,7 +16,12 @@
 
 				<div class="block">
 					<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-						<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '270'); }?>
+						<?php //if (function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '270'); }?>
+						<?php if(has_post_thumbnail()): ?>
+							<?php the_post_thumbnail() ?>
+						<?php else: ?>
+							<img src="http://placehold.it/270x170/ffeedd"/>
+						<?php endif; ?>
 					</a>
 					<div class="block-right">
 						<h2 class="project-name"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>

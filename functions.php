@@ -74,3 +74,5 @@ function twentyeleven_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
+
+add_theme_support( 'post-thumbnails' ); 
