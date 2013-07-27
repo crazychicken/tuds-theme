@@ -27,7 +27,12 @@
 
 		<div class="block">
 			<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-				<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '270'); }?>
+				<?php //if (function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '270'); }?>
+				<?php if(has_post_thumbnail()): ?>
+					<?php the_post_thumbnail() ?>
+				<?php else: ?>
+					<img src="http://placehold.it/270x170/ffeedd"/>
+				<?php endif; ?>
 			</a>
 			<div class="block-right">
 				<h2 class="project-name"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
@@ -55,7 +60,7 @@
 				<p>
 					<?php the_excerpt(); ?>
 				</p>
-				<a class="view-more" href="#"><img src="<?php bloginfo('template_url') ?>/assets/images/arrow-right.png" alt=""></a>
+				<a class="view-more" href="<?php the_permalink() ?>"><img src="<?php bloginfo('template_url') ?>/assets/images/arrow-right.png" alt=""></a>
 			</div>
 		</div>
 		<?php endwhile; ?>
