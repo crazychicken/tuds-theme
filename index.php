@@ -55,7 +55,7 @@
 				<p>
 					<?php the_excerpt(); ?>
 				</p>
-				<a class="view-more" href="#"><img src="<?php bloginfo('template_url') ?>/assets/images/arrow-right.png" alt=""></a>
+				<a class="view-more" href="<?php the_permalink() ?>"><img src="<?php bloginfo('template_url') ?>/assets/images/arrow-right.png" alt=""></a>
 			</div>
 		</div>
 		<?php endwhile; ?>

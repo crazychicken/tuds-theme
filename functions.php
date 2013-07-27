@@ -7,7 +7,8 @@ add_action( 'init', 'register_my_menu' );
 
 // Filter wp_nav_menu() to add additional links and other output
 function new_nav_menu_items($items) {
-	$homelink = '<li class="home"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
+	$homeClass = is_home() ? 'current_page_item': '';
+	$homelink = '<li class="home ' . $homeClass . '"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
 	$items = $homelink . $items;
 	return $items;
 }
