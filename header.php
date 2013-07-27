@@ -4,18 +4,18 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
 
-	<link rel="stylesheet" type="text/css" href="wp-content/themes/dung-website/assets/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome.css">
 	<!-- [if IE 7] -->
-	<link rel="stylesheet" type="text/css" href="wp-content/themes/dung-website/assets/css/font-awesome-ie7.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome-ie7.css">
 	<!-- [endif] -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	
+
 	<?php wp_head(); ?>
 </head>
 
 <body>
 	<div class="container">
-		<a class="goto-top" href="#"><img src="wp-content/themes/dung-website/assets/images/go-top.png" alt=""></a>
+		<a class="goto-top" href="#"><img src="<?php bloginfo('template_url'); ?>/assets/images/go-top.png" alt=""></a>
 		<div class="header">
 			<!-- <a class="brand logo">
 				<img <?php bloginfo("name"); ?> src="wp-content/themes/dung-website/assets/images/logo.png" alt="">
