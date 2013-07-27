@@ -14,7 +14,7 @@
 				 * define twentyeleven_comment() and that will be used instead.
 				 * See twentyeleven_comment() in twentyeleven/functions.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'tuds_theme_comment' ) );
+				wp_list_comments();
 			?>
 		</ul>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
