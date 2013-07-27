@@ -15,14 +15,36 @@
 			<?php wowslider(1); ?>
 		</div>
 
-		<div <?php post_class('post') ?>>
-			<div class="block-title">
-				<h3 class="entry-title noinfo"><i class="icon-paste"></i><?php the_title(); ?></h3>
+		<div class="block-title">
+			<h3><i class="icon-paste"></i>New project</h3>
+		</div>
+		<?php
+			$args = array( 'post_type' => 'project', 'posts_per_page' => 2, 'orderby' => 'post_date', 'order' => 'DESC' );
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ):
+				$loop->the_post();
+		?>
+
+		<div class="block">
+			<a href="#">
+				<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '270'); }?>
+			</a>
+			<div class="block-right">
+				<h2 class="project-name"><a href="#"><?php the_title(); ?></a></h2>
+				<span class="name"><a href="#"><?php the_author() ?></a></span>
+				<p class="members">Member : <a href="#">john doe,</a> <a href="#">Petter,</a> <a href="#">Marry</a> ...</p>
 			</div>
-			<div class="content">
-				<?php the_content() ?>
+
+			<div class="block-info">
+				<h3><a href="#">Project info</a></h3>
+				<p>
+					<?php the_excerpt(); ?>
+				</p>
+				<a class="view-more" href="#"><img src="<?php bloginfo('template_url') ?>/assets/images/arrow-right.png" alt=""></a>
 			</div>
 		</div>
+
+		<?php endwhile; ?>
 	</div>
 
 	<?php get_sidebar();?>

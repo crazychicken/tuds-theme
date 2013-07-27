@@ -11,7 +11,7 @@
 	</div>
 	<?php wp_footer();?>
 
-	<script type="text/javascript" src="wp-content/themes/dung-website/assets/js/jquery.js"></script>
-	<script type="text/javascript" src="wp-content/themes/dung-website/assets/js/custom.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/custom.js"></script>
 </body>
 </html>
