@@ -652,7 +652,7 @@ input,textarea {
 /****** /sidebar *****/
 /******************************/
 .wrap-slide {
-	margin-bottom:40px;
+	margin-bottom:30px;
 	position:relative;
 	float:left;
 	width:100%;
@@ -688,4 +688,14 @@ input,textarea {
 /******************************/
 /****** /sidebar *****/
 /******************************/
+
+.metaslider .caption-wrap {
+	top:auto;
+	bottom:auto !important;
+}
+
+
+
+
+
 

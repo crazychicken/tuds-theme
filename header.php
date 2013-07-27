@@ -10,6 +10,8 @@
 	<!-- [endif] -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/custom.js"></script>
 	<?php wp_head(); ?>
 </head>
 
