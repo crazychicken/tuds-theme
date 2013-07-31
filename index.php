@@ -19,7 +19,7 @@
 			<h3><i class="icon-paste"></i>New project</h3>
 		</div>
 		<?php
-			$args = array( 'post_type' => 'project', 'posts_per_page' => 2, 'orderby' => 'post_date', 'order' => 'DESC' );
+			$args = array( 'post_type' => 'project', 'posts_per_page' => 2, 'orderby' => 'menu_order', 'order' => 'ASC' );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ):
 				$loop->the_post();
