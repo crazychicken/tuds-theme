@@ -655,7 +655,7 @@ input,textarea {
 	color:#fff;
 	margin-right:10px;
 }
-.nav-menu li.current-menu-iteam a {
+.nav-menu li.current-menu-item a {
 	background:#a92534;
 }
 .nav-menu li a:hover {
@@ -666,14 +666,14 @@ input,textarea {
 	background:none;
 }
 .nav-menu li.active .sub-menu,
-.nav-menu li.current-menu-iteam .sub-menu {
+.nav-menu li.current-menu-item .sub-menu {
 	display:block;
 }
 .sub-menu li a {
 	padding-left:30px;
 }
 .sub-menu li.active a,
-.sub-menu li.current-menu-iteam a {
+.sub-menu li.current-menu-item a {
 	background:#9c1f2d;
 	font-weight:700;
 }
