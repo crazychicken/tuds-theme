@@ -636,14 +636,14 @@ input,textarea {
 	float:left;
 	padding-top:20px;
 }
-.nav-menu {
+.menu-home-container {
 	float:left;
 	width:100%;
 }
-.nav-menu li {
+.menu-home-container li {
 	width:100%;
 }
-.nav-menu li a {
+.menu-home-container li a {
 	float:left;
 	width:95%;
 	color:#fff;
@@ -651,20 +651,20 @@ input,textarea {
 	text-transform: uppercase;
 	position:relative;
 }
-.nav-menu li i {
+.menu-home-container li i {
 	color:#fff;
 	margin-right:10px;
 }
-.nav-menu li.active a {
+.menu-home-container li.active a {
 	/*background:#a92534;*/
 }
-.nav-menu li a:hover {
+.menu-home-container li a:hover {
 	background:#a42231;	
 }
 .sub-menu {
 	display:none;
 }
-.nav-menu li.current-menu-ancestor .sub-menu {
+.menu-home-container li.current-menu-ancestor .sub-menu {
 	display:block;
 }
 .sub-menu li a {
