@@ -94,7 +94,11 @@ input,textarea {
 	bottom:0px;
 	left:0px;
 }
-.members a {
+.block-right p {
+	margin:5px 0px;
+}
+.members a,
+.block-info a {
 	text-decoration:underline;
 }
 .block-info {
