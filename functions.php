@@ -84,17 +84,25 @@ add_theme_support( 'post-thumbnails' );
  */
 function my__widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Main Widget Area', 'twentythirteen' ),
+		'name'          => __( 'Main Widget Area', 'ames' ),
 		'id'            => 'featured_member',
-		'description'   => __( 'Appears in the footer section of the site.', 'twentythirteen' ),
+		'description'   => __( 'Appears in the footer section of the site.', 'ames' ),
 		'before_widget' => '<li class="thumbnail">',
 		'after_widget'  => '</li>'
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Home page slider area', 'tuds' ),
+		'name'          => __( 'Home page slider area', 'ames' ),
 		'id'            => 'metaslider',
-		'description'   => __( 'Home page slider.', 'tuds' ),
+		'description'   => __( 'Home page slider.', 'ames' ),
+		'before_widget' => "",
+		'after_widget'  => ""
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Top header bar', 'ames' ),
+		'id'            => 'top_header_1',
+		'description'   => __( 'Top header section.', 'ames' ),
 		'before_widget' => "",
 		'after_widget'  => ""
 	) );

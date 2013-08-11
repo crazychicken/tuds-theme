@@ -16,6 +16,10 @@
 </head>
 
 <body>
+	<?php if ( is_active_sidebar( 'top_header_1' ) ) : ?>
+		<?php if (!dynamic_sidebar('top_header_1') ) : ?>
+		<?php endif; ?>
+	<?php endif; ?>
 	<div class="container">
 		<a class="goto-top" href="#"><img src="<?php bloginfo('template_url'); ?>/assets/images/go-top.png" alt=""></a>
 		<div class="header">
