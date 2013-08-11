@@ -23,20 +23,18 @@
 						<h2 class="project-name"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 						<span class="name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author() ?></a></span>
 						<?php 
-							$taxonomy = 'people';
-		  					$terms = wp_get_post_terms($post->ID, $taxonomy);
-		  				?>
-						<?php if(count($terms) > 0) : ?>
+							$members = get_post_meta(get_the_ID(), 'member', true);
+						?>
+						
+						<?php if(count($members) > 0): ?>
 							<p class="members">Member : 
-								<?php foreach($terms as $term): ?>
+								<?php foreach($members as $member): ?>
 									<?php 
-										$term_link = get_term_link( $term, 'people');
-									    if( is_wp_error( $term_link ) )
-									        continue;
+										$member_meta = get_the_author_meta('display_name', $member);
+										$author_url = esc_url( get_author_posts_url( $member ) );
 									?>
-									<a href="<?php echo $term_link ?>"><?php echo $term->name ?></a>
+									<a href="<?php echo $author_url ?>"><?php echo $member_meta ?></a>
 								<?php endforeach; ?>
-							</p>
 						<?php endif; ?>
 					</div>
 				</div>			

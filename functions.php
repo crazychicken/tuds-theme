@@ -76,3 +76,27 @@ function twentyeleven_comment( $comment, $args, $depth ) {
 }
 
 add_theme_support( 'post-thumbnails' ); 
+
+/**
+ * Registers two widget areas.
+ *
+ * @return void
+ */
+function my__widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Main Widget Area', 'twentythirteen' ),
+		'id'            => 'featured_member',
+		'description'   => __( 'Appears in the footer section of the site.', 'twentythirteen' ),
+		'before_widget' => '<li class="thumbnail">',
+		'after_widget'  => '</li>'
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Home page slider area', 'tuds' ),
+		'id'            => 'metaslider',
+		'description'   => __( 'Home page slider.', 'tuds' ),
+		'before_widget' => "",
+		'after_widget'  => ""
+	) );
+}
+add_action( 'widgets_init', 'my__widgets_init' );
