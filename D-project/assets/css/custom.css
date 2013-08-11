@@ -33,9 +33,16 @@ input,textarea {
 	box-shadow:0px 0px 5px #ddd;
 	position:relative;
 	overflow:hidden;
-	margin-bottom:10px;
 }
-
+.language {
+	width:1200px;
+	margin:10px auto;
+	text-align:right;
+}
+.language a {
+	margin-left:20px;
+	font-size:12px;
+}
 /******************************/
 /****** block *****/
 /******************************/
@@ -424,7 +431,7 @@ input,textarea {
 	margin-right:10px;
 }
 .nav-menu li.active a {
-	background:#a92534;
+	/*background:#a92534;*/
 }
 .nav-menu li a:hover {
 	background:#a42231;	
@@ -437,6 +444,10 @@ input,textarea {
 }
 .sub-menu li a {
 	padding-left:30px;
+}
+.sub-menu li.active a {
+	background:#9c1f2d;
+	font-weight:700;
 }
 
 .goto-top {
