@@ -61,6 +61,14 @@ input,textarea {
 	float:left;
 	margin-bottom:40px;
 }
+.block > a {
+	width:270px;
+	height:170px;
+	background:#999;
+	float:left;
+	margin-bottom:20px;
+	overflow:hidden;
+}
 .block a img {
 	float:left;
 	border-radius:6px;
@@ -193,26 +201,33 @@ input,textarea {
 .number-comment i{
 	font-size:24px;
 }
-.form-comment {
+#commentform {
 	float:left;
 	width:50%;
 	margin-bottom:30px;
 }
-.form-comment label,
-.form-comment input,
-.form-comment textarea {
+#commentform label,
+#commentform input,
+#commentform textarea {
 	float:left;
 	width:100%;
 	margin-bottom:10px;
 }
-.form-comment label {
+#commentform label {
 	margin-bottom:3px;
 }
-.form-comment textarea {
+#commentform textarea {
 	min-height:100px;
 }
-.form-comment .btn {
+#commentform input[type="submit"] {
 	margin-right:-5%;
+	width:150px;
+	font-size:16px;
+	padding:7px;
+	background:#df3d4a;
+	border-right:5px solid #a92534;
+	color:#fff;
+	float:right;
 }
 .comment-list {
 	clear:both;
@@ -230,9 +245,13 @@ input,textarea {
 	font-weight:bold;
 	color:#555;
 }
-.comment-info span{
+.comment-meta {
 	font-size:12px;
 	color:#999;
+	margin-bottom:15px;
+}
+.comment-body p{
+	padding-left:70px;
 }
 .avatar-comment {
 	float:left;
@@ -388,18 +407,32 @@ input,textarea {
 .nav-menu li {
 	width:100%;
 }
-.nav-menu li a{
+.nav-menu li a {
 	float:left;
 	width:95%;
 	color:#fff;
 	padding:8px 0px 10px 5%;
 	text-transform: uppercase;
+	position:relative;
+}
+.nav-menu li i {
+	color:#fff;
+	margin-right:10px;
 }
 .nav-menu li.active a {
 	background:#a92534;
 }
-.nav-menu li:hover a {
+.nav-menu li a:hover {
 	background:#a42231;	
+}
+.sub-menu {
+	display:none;
+}
+.nav-menu li.active .sub-menu {
+	display:block;
+}
+.sub-menu li a {
+	padding-left:30px;
 }
 
 .goto-top {

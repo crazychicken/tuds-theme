@@ -2,6 +2,7 @@
 
 <div class="main">
 	<div class="body-content">
+		
 		<?php if ( is_active_sidebar( 'metaslider' ) ) : ?>
 			<?php if (!dynamic_sidebar('metaslider') ) : ?>
 			<?php endif; ?>
