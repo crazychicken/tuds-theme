@@ -430,15 +430,14 @@ input,textarea {
 	color:#fff;
 	margin-right:10px;
 }
-.nav-menu li.current-menu-ancestor a {
-	background:#a92534;
+.nav-menu li.active a {
+	/*background:#a92534;*/
 }
 .nav-menu li a:hover {
 	background:#a42231;	
 }
 .sub-menu {
 	display:none;
-	background:none;
 }
 .nav-menu li.current-menu-ancestor .sub-menu {
 	display:block;
