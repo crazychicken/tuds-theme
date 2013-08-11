@@ -407,18 +407,32 @@ input,textarea {
 .nav-menu li {
 	width:100%;
 }
-.nav-menu li a{
+.nav-menu li a {
 	float:left;
 	width:95%;
 	color:#fff;
 	padding:8px 0px 10px 5%;
 	text-transform: uppercase;
+	position:relative;
+}
+.nav-menu li i {
+	color:#fff;
+	margin-right:10px;
 }
 .nav-menu li.active a {
 	background:#a92534;
 }
-.nav-menu li:hover a {
+.nav-menu li a:hover {
 	background:#a42231;	
+}
+.sub-menu {
+	display:none;
+}
+.nav-menu li.active .sub-menu {
+	display:block;
+}
+.sub-menu li a {
+	padding-left:30px;
 }
 
 .goto-top {
