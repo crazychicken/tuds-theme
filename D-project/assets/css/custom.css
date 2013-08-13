@@ -33,16 +33,9 @@ input,textarea {
 	box-shadow:0px 0px 5px #ddd;
 	position:relative;
 	overflow:hidden;
+	margin-bottom:10px;
 }
-.language {
-	width:1200px;
-	margin:10px auto;
-	text-align:right;
-}
-.language a {
-	margin-left:20px;
-	font-size:12px;
-}
+
 /******************************/
 /****** block *****/
 /******************************/
@@ -101,11 +94,7 @@ input,textarea {
 	bottom:0px;
 	left:0px;
 }
-.block-right p {
-	margin:5px 0px;
-}
-.members a,
-.block-info a {
+.members a {
 	text-decoration:underline;
 }
 .block-info {
@@ -411,14 +400,14 @@ input,textarea {
 	float:left;
 	padding-top:20px;
 }
-.menu-home-container {
+.nav-menu {
 	float:left;
 	width:100%;
 }
-.menu-home-container li {
+.nav-menu li {
 	width:100%;
 }
-.menu-home-container li a {
+.nav-menu li a {
 	float:left;
 	width:95%;
 	color:#fff;
@@ -426,28 +415,24 @@ input,textarea {
 	text-transform: uppercase;
 	position:relative;
 }
-.menu-home-container li i {
+.nav-menu li i {
 	color:#fff;
 	margin-right:10px;
 }
-.menu-home-container li.active a {
-	/*background:#a92534;*/
+.nav-menu li.active a {
+	background:#a92534;
 }
-.menu-home-container li a:hover {
+.nav-menu li a:hover {
 	background:#a42231;	
 }
 .sub-menu {
 	display:none;
 }
-.menu-home-container li.current-menu-ancestor .sub-menu {
+.nav-menu li.active .sub-menu {
 	display:block;
 }
 .sub-menu li a {
 	padding-left:30px;
-}
-.sub-menu li.current-menu-item a {
-	background:#9c1f2d;
-	font-weight:700;
 }
 
 .goto-top {

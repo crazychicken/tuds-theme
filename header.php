@@ -8,10 +8,10 @@
 	<!-- [if IE 7] -->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome-ie7.css">
 	<!-- [endif] -->
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css?v=<?php echo time() ?>" type="text/css" media="screen" title="no title" charset="utf-8">
 
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/custom.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/custom.js?v=<?php echo time() ?>"></script>
 	<?php wp_head(); ?>
 </head>
 

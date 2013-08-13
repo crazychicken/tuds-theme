@@ -19,7 +19,7 @@
 					<div class="block-info">
 						<h3>Biographical Info</h3>
 						<p>
-							<?php echo $curauth->description ?>
+							<?php echo nl2br($curauth->description) ?>
 						</p>
 					</div>
 				</div>

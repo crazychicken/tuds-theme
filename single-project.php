@@ -16,7 +16,7 @@
 					<span class="name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_the_author_meta( 'user_nicename' ) ?></a></span>
 				</div>
 				<div class="block-info">
-					<h3><a href="#">Project info</a></h3>
+					<h3>Project info</h3>
 					<p>
 						<?php echo the_content(); ?>
 					</p>

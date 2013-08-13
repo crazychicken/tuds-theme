@@ -35,7 +35,7 @@
 					$members = get_post_meta(get_the_ID(), 'member', true);
 				?>
 				
-				<?php if(count($members) > 0): ?>
+				<?php if(!empty($members) && count($members) > 0): ?>
 					<p class="members">Member : 
 						<?php foreach($members as $member): ?>
 							<?php 
@@ -49,7 +49,7 @@
 			</div>
 
 			<div class="block-info">
-				<h3><a href="#">Project info</a></h3>
+				<h3>Project info</h3>
 				<p>
 					<?php the_excerpt(); ?>
 				</p>

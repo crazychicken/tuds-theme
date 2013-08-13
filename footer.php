@@ -4,7 +4,9 @@
 	
 	<div class="footer">
 		<ul class="nav">
-			<?php wp_nav_menu( $args ); ?>
+			<li><a href="#">Home</a> <span>/</span></li>
+			<li><a href="#">Project</a> <span>/</span></li>
+			<li><a href="#">Contact</a></li>
 		</ul>
 		<br>
 		<p>Copy right @ clgt.vn 2013</p>

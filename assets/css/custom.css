@@ -1,228 +1,3 @@
-/*
-Theme Name: Dung Website
-Theme URI: http://wordpress.org/
-Description: The 2010 default theme for WordPress.
-Author: Truong Nguyen Minh Tu
-Author URI: http://wordpress.org/
-Version: 1.0
-Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu (optional)
-
-License:
-License URI:
-
-General comments (optional).
-*/
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-dialog,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-font,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-hr,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-meter,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-progress,
-q,
-rp,
-rt,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video,
-xmp {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-/*
-  Override the default (display: inline) for
-  browsers that do not recognize HTML5 tags.
-
-  IE8 (and lower) requires a shiv:
-  http://ejohn.org/blog/html5-shiv
-*/
-  display: block;
-}
-
-b,
-strong {
-/*
-  Makes browsers agree.
-  IE + Opera = font-weight: bold.
-  Gecko + WebKit = font-weight: bolder.
-*/
-  font-weight: bold;
-}
-
-img {
-  color: transparent;
-  font-size: 0;
-  vertical-align: middle;
-/*
-  For IE.
-  http://css-tricks.com/ie-fix-bicubic-scaling-for-images
-*/
-  -ms-interpolation-mode: bicubic;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-li {
-/*
-  For IE6 + IE7:
-
-  "display: list-item" keeps bullets from
-  disappearing if hasLayout is triggered.
-*/
-  display: list-item;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-th,
-td,
-caption {
-  font-weight: normal;
-  vertical-align: top;
-  text-align: left;
-}
-
-q {
-  quotes: none;
-}
-
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-sub,
-sup,
-small {
-  font-size: 75%;
-}
-
-sub,
-sup {
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-svg {
-/*
-  For IE9. Without, occasionally draws shapes
-  outside the boundaries of <svg> rectangle.
-*/
-  overflow: hidden;
-}
-
-
-
 body {
 	color:#777;
 	font-family: 'Open Sans', sans-serif;
@@ -258,12 +33,9 @@ input,textarea {
 	box-shadow:0px 0px 5px #ddd;
 	position:relative;
 	overflow:hidden;
+	margin-bottom:10px;
 }
-.language {
-	float:left;
-	width:100%;
-	margin:10px 0px;
-}
+
 /******************************/
 /****** block *****/
 /******************************/
@@ -289,15 +61,6 @@ input,textarea {
 	float:left;
 	margin-bottom:40px;
 }
-.block > a {
-	width:270px;
-	height:170px;
-	background:#999;
-	float:left;
-	margin-bottom:20px;
-	overflow:hidden;
-	border-radius:6px;
-}
 .block a img {
 	float:left;
 	border-radius:6px;
@@ -308,7 +71,6 @@ input,textarea {
 	margin-left:20px;
 	position:relative;
 	min-height:170px;
-	width:575px;
 }
 .project-name a{
 	font-size:40px;
@@ -324,11 +86,7 @@ input,textarea {
 	bottom:0px;
 	left:0px;
 }
-.block-right p {
-	margin:5px 0px;
-}
-.members a,
-.block-info a {
+.members a {
 	text-decoration:underline;
 }
 .block-info {
@@ -363,9 +121,6 @@ input,textarea {
 .block-info .members a {
 	font-size:13px;
 	color:#df3d4a;
-}
-.block-info a img {
-	float:none;
 }
 .wrap-contact {
 	float:left;
@@ -438,33 +193,26 @@ input,textarea {
 .number-comment i{
 	font-size:24px;
 }
-#commentform {
+.form-comment {
 	float:left;
 	width:50%;
 	margin-bottom:30px;
 }
-#commentform label,
-#commentform input,
-#commentform textarea {
+.form-comment label,
+.form-comment input,
+.form-comment textarea {
 	float:left;
 	width:100%;
 	margin-bottom:10px;
 }
-#commentform label {
+.form-comment label {
 	margin-bottom:3px;
 }
-#commentform textarea {
+.form-comment textarea {
 	min-height:100px;
 }
-#commentform input[type="submit"] {
+.form-comment .btn {
 	margin-right:-5%;
-	width:150px;
-	font-size:16px;
-	padding:7px;
-	background:#df3d4a;
-	border-right:5px solid #a92534;
-	color:#fff;
-	float:right;
 }
 .comment-list {
 	clear:both;
@@ -482,13 +230,9 @@ input,textarea {
 	font-weight:bold;
 	color:#555;
 }
-.comment-meta {
+.comment-info span{
 	font-size:12px;
 	color:#999;
-	margin-bottom:15px;
-}
-.comment-body p{
-	padding-left:70px;
 }
 .avatar-comment {
 	float:left;
@@ -509,14 +253,6 @@ input,textarea {
 	width:270px;
 	float:left;
 	margin:0px 0px 30px 25px;
-}
-.thumbnail > a {
-	height:170px;
-	width:270px;
-	overflow: hidden;
-	border-radius:6px;
-	float:left;
-	margin-bottom:10px;
 }
 .thumbnail .name {
 	text-align:center;
@@ -588,15 +324,10 @@ input,textarea {
 	float:left;
 	margin-left:30px;
 	cursor: pointer;
-	font-size: 30px;
+	margin-top:5px;
 }
 .brand img {
 	height:35px;
-}
-.tag-line {
-	float:left;
-	clear:both;
-	margin-left:30px;
 }
 .form-search {
 	margin-right:30px;
@@ -650,49 +381,27 @@ input,textarea {
 	float:left;
 	padding-top:20px;
 }
-.menu-home-container {
+.nav-menu {
 	float:left;
 	width:100%;
 }
-.menu-home-container li {
+.nav-menu li {
 	width:100%;
 }
-.menu-home-container li a {
+.nav-menu li a{
 	float:left;
 	width:95%;
 	color:#fff;
 	padding:8px 0px 10px 5%;
 	text-transform: uppercase;
-	position:relative;
 }
-.menu-home-container li i {
-	color:#fff;
-	margin-right:10px;
-}
-.menu-home-container li.current-menu-item > a,
-.menu-home-container li.current-menu-ancestor > a {
+.nav-menu li.active a {
 	background:#a92534;
 }
-.menu-home-container li a:hover,
-.sub-menu li.current-menu-item a:hover {
-	background:#a42231;
+.nav-menu li:hover a {
+	background:#a42231;	
 }
-.sub-menu {
-	display:none;
-}
-.menu-home-container li.current-menu-item .sub-menu,
-.menu-home-container li.current-menu-ancestor .sub-menu,
-.menu-home-container li:hover .sub-menu {
-	display:block;
-}
-.sub-menu li a {
-	padding-left:30px;
-}
-.sub-menu li.current-menu-item a {
-	/*background:#9c1f2d;*/
-	font-weight:700;
-	background:none;
-}
+
 .goto-top {
 	position:fixed;
 	right:20px;
@@ -744,27 +453,4 @@ input,textarea {
 /******************************/
 /****** /sidebar *****/
 /******************************/
-.metaslider {
-	margin-bottom:30px;
-}
-.metaslider .caption-wrap {
-	bottom:auto !important;
-}
-.xililanguagelist {
-	width:1200px;
-	margin:0px auto;
-}
-.lang-en_us,
-.lang-vi {
-	background:url('assets/images/english.png') left top no-repeat;
-	width:24px;
-	height:24px;
-	text-indent:-10000px;
-	float:right;
-	margin-left:10px;
-}
-.lang-vi {
-	background:url('assets/images/vietnam.png') left top no-repeat;
-}
-
 
