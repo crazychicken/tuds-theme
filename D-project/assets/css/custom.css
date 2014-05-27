@@ -133,7 +133,7 @@ input,textarea {
 }*/
 .block-info .view-more {
 	right:10px;
-	bottom:-20px;
+	bottom:-30px;
 	position:absolute;
 	border:1px solid #ddd;
 	background:#fafafa;
@@ -447,7 +447,7 @@ input,textarea {
 	margin-right:2px;
 	text-transform: uppercase;
 }
-.nav-menu li.active a {
+.nav-menu li.current_page_item a {
 	background:#fafafa;
 }
 .nav-menu > li:hover > a {
@@ -531,6 +531,8 @@ input,textarea {
 	position:absolute;
 	left:0px;
 	top:0px;
+	width: 870px;
+	height: 390px;
 }
 .nav-slide {
 	position:absolute;
