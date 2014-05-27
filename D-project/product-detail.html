@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>D-product-detail</title>
-	
+
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 
@@ -15,6 +15,15 @@
 </head>
 <body>
 
+	<div class="language">
+		<ul class="xililanguagelist">
+			<li>
+				<a class="lang-vi" href="http://www.ames-lab.com/?lang=vi" title="Posts selected in vietnamese">vietnamese</a>
+				<a class="lang-en-us" href="http://www.ames-lab.com/?lang=en-us" title="Posts selected in vietnamese">vietnamese</a>
+			</li>
+		</ul>
+	</div>
+
 	<div class="container">
 
 		<div class="header">
@@ -24,6 +33,23 @@
 			<form class="form-search f-right">
 				<input type="text" placeholder="search">
 			</form>
+
+			<ul class="nav-menu">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="#">Introduction</a></li>
+				<li>
+					<a href="#">Project <i class="icon-angle-down"></i></a>
+					<ul class="sub-menu">
+						<li>
+							<a href="product-detail.html">Project - Detail</a>
+						</li>
+						<li>
+							<a href="product-list.html">Project - list</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
 		</div>
 		<!-- /header -->
 
@@ -45,11 +71,10 @@
 					</a>
 					<div class="block-right">
 						<h2 class="project-name"><a href="#">Project Name</a></h2>
-						<span class="name"><a href="#">John doe</a></span>
+						<span class="name"><a href="#"><i class="icon-user"></i> John doe</a></span>
 					</div>
 
 					<div class="block-info">
-						<h3><a href="#">Project info</a></h3>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
 						</p>
@@ -70,79 +95,60 @@
 				<div class="comment">
 					<h3>Comment</h3>
 					<p class="number-comment"><i class="icon-comment-alt"></i><a href="#"> 1 Comment</a></p>
-					<form id="commentform">
+					<form class="form-comment">
 						<label>Email</label>
 						<input type="email">
 						<label>Message</label>
 						<textarea></textarea>
-						<input name="submit" type="submit" id="submit" value="Post Comment">
-
-						<!-- <button class="f-right btn btn-red">Send</button> -->
+						<button class="f-right btn btn-red">Send</button>
 					</form>
 
-					<!-- <ul class="comment-list">
-						<li>
-							<a class="avatar-comment" href="#"><img src="assets/images/avatar-comment.png" alt=""></a>
-							<div class="comment-info">
-								<a class="name" href="#">John doe</a> <span>Apr 20, 2013 at 9:26 PM</span>
-								<p>super clean!</p>
-							</div>
-						</li>
-						<li>
-							<a class="avatar-comment" href="#"><img src="assets/images/avatar-comment.png" alt=""></a>
-							<div class="comment-info">
-								<a class="name" href="#">John doe</a> <span>Apr 20, 2013 at 9:26 PM</span>
-								<p>super clean!</p>
-							</div>
-						</li>
-					</ul> -->
-
 					<ul class="comment-list">
-						<li class="comment">
-
-							<div class="comment-body">
-								<div class="comment-author vcard">
-									<a class="avatar-comment" href="#">
-										<img src="assets/images/avatar-comment.png" alt="">
-									</a>
-
-									<cite class="fn"><a href="http://editor" rel="external nofollow" class="url">editor</a></cite> <span class="says">says:</span>
-								</div>
-
-								<div class="comment-meta commentmetadata"><a href="#">
-									July 27, 2013 at 10:40 am</a>
-								</div>
-
-								<p>fgfgfgf gfgfg fgfgfgf gfgfg fgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfgfgfgfgf gfgfg</p>
-
-								<div class="reply f-right">
-									<a class="comment-reply-link" href="/~tuds/wordpress/?project=project-3&amp;replytocom=2#respond" onclick="return addComment.moveForm(&quot;div-comment-2&quot;, &quot;2&quot;, &quot;respond&quot;, &quot;178&quot;)">Reply</a>
-								</div>
+						<li>
+							<a class="avatar-comment" href="#"><img src="assets/images/avatar-comment.png" alt=""></a>
+							<div class="comment-info">
+								<a class="name" href="#">John doe</a> <span>Apr 20, 2013 at 9:26 PM</span>
+								<p>super clean!</p>
+							</div>
+						</li>
+						<li>
+							<a class="avatar-comment" href="#"><img src="assets/images/avatar-comment.png" alt=""></a>
+							<div class="comment-info">
+								<a class="name" href="#">John doe</a> <span>Apr 20, 2013 at 9:26 PM</span>
+								<p>super clean!</p>
 							</div>
 						</li>
 					</ul>
-
-
 				</div>
 
 			</div>
 			<!-- /body-content -->
 
 			<div class="sidebar">
-				<ul class="nav-menu">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Project</a></li>
-					<li><a href="#">Contact</a></li>
-					<li class="active">
-						<a href="#">submenu <i class="icon-chevron-down f-right"></i></a>
-						<ul class="sub-menu">
-							<li>
-								<a href="#"><!-- <i class="icon-caret-right"></i> -->menu list</a>
-								<a href="#"><!-- <i class="icon-caret-right"></i> -->menu list</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
+				<div class="sidebar-widget">
+					<h5 class="widget-head">
+						<span>Recent</span>
+					</h5>
+					<ol class="widget-content">
+						<li>
+							<a href="#"><img src="http://placehold.it/60x60/ddd/"></a>
+							<a href="#">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
+							<span class="post-date">January 4, 2013</span>
+						</li>
+
+						<li>
+							<a href="#"><img src="http://placehold.it/60x60/ddd/"></a>
+							<a href="#">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
+							<span class="post-date">January 4, 2013</span>
+						</li>
+
+						<li>
+							<a href="#"><img src="http://placehold.it/60x60/ddd/"></a>
+							<a href="#">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
+							<span class="post-date">January 4, 2013</span>
+						</li>
+					</ol>
+				</div>
 			</div>
 			<!-- /sidebar -->
 		</div>
