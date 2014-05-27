@@ -67,12 +67,23 @@ input,textarea {
 	float:left;
 	margin-bottom:40px;
 }
+.block > a {
+	width:220px;
+	height:140px;
+	background:#999;
+	float:left;
+	margin-bottom:20px;
+	overflow:hidden;
+	border-radius:6px;
+}
 .block a img {
 	float:left;
 	border-radius:6px;
 	margin-bottom:20px;
-	/*height:160px;
-	width:220px;*/
+	max-height:100%;
+	min-height:100%;
+	max-width:100%;
+	min-width:100%;
 }
 .block-right {
 	float:left;
